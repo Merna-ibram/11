@@ -1,0 +1,34 @@
+<odoo>
+    <record id="view_form_model_a" model="ir.ui.view">
+        <field name="name">model.a.form</field>
+        <field name="model">model.a</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_model_a" model="ir.ui.view">
+        <field name="name">model.a.tree</field>
+        <field name="model">model.a</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_model_a" model="ir.actions.act_window">
+        <field name="name">Model A</field>
+        <field name="res_model">model.a</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_model_a_root" name="My App"/>
+    <menuitem id="menu_model_a" name="Model A" parent="menu_model_a_root" action="action_model_a"/>
+</odoo>
